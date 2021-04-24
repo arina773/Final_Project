@@ -120,7 +120,6 @@ def get_data(pageNo):
         else:
             all1.append('0')
         add_book(all1[0], Author(all1[1]), all1[2], all1[3], all1[4])
-        # alls.append(all1)
     return alls
 results = []
 for i in range(1, no_pages+1):
@@ -129,10 +128,3 @@ for i in range(1, no_pages+1):
         get_data(i)
     finally:
         conn.close()
-
-
-# flatten = lambda l: [item for sublist in l for item in sublist]
-# df = pd.DataFrame(flatten(results),columns=['Book Name','Author','Rating','Customers_Rated', 'Price'])
-# print(df)
-# df.to_csv('amazon_products.csv', index=False, encoding='utf-8')
-
